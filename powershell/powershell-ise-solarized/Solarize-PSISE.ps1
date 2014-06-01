@@ -204,7 +204,7 @@ switch ($PSVersionTable.PSVersion.Major) {
     $psISE.Options.OutputPaneForegroundColor = $base1
 
   }
-  3 
+  4
   {
     # PowerShell 3.0 ISE specific stuff go here. No Command pane & Output pane. 
     # Has a Console pane that is essentially the Command & Output panes combined and supports token colors! W00t!

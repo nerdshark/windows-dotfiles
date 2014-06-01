@@ -60,7 +60,7 @@ if (!($psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.DisplayName -contains $men
   $SolMenu = $psISE.CurrentPowerShellTab.AddOnsMenu.Submenus.Add($menuName,$null,$null)
 
   # Add entries
-  $Global:SolScript = "$(Split-Path (Get-Variable MyInvocation).Value.InvocationName)\Solarize-PSISE.ps1"
+  $Global:SolScript = "$PSScriptRoot\Solarize-PSISE.ps1"
   $SolMenu.Submenus.Add("Apply Dark palette",{Invoke-Expression "$Global:SolScript -Dark -FontSize $Global:FontSize"},"Alt+Shift+D") | Out-Null
   $SolMenu.Submenus.Add("Apply Light palette",{Invoke-Expression "$Global:SolScript -FontSize $Global:FontSize"},"Alt+Shift+L") | Out-Null
 
